@@ -50,7 +50,10 @@ export const Сreate = async (req, res) =>{
         const doc = new UserModel({
             username: req.body.username,
             email: req.body.email,
+            telephone: req.body.telephone,
+            birthday: req.body.birthday,
             password: req.body.password,
+            roles: req.body.roles
         })
 
         const user = await doc.save()
@@ -106,7 +109,9 @@ export const Update = async(req, res) =>{
         },{
             username: req.body.username,
             email: req.body.email,
-            password: req.body.password,
+            telephone: req.body.telephone,
+            birthday: req.body.birthday,
+            roles: req.body.roles
         })
 
         res.json({

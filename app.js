@@ -3,6 +3,7 @@ import cors from "cors"
 import mongoose from "mongoose"
 import * as dotenv from 'dotenv'
 import authRouter from "./src/routes/authRouter.js"
+import usersRouter from "./src/routes/usersRouter.js"
 dotenv.config()
 
 const app = express()
@@ -19,7 +20,7 @@ mongoose
 
 
 app.use("/auth", authRouter)
-app.use("/users", authRouter)
+app.use("/users", usersRouter)
 
 
 

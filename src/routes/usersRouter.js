@@ -8,9 +8,10 @@ const router = new Router()
 router.get("/getAll", checkAuth, UserController.getAll)
 router.get("/getOne/:id", checkAuth, UserController.getOne)
 
-router.post("/createUser", UserController.Сreate)
-router.delete("/removeUser/:id", UserController.Remove)
+router.post("/createUser", checkAuth, UserController.Сreate)
+router.delete("/removeUser/:id", checkAuth, UserController.Remove)
 router.patch("/updateUser/:id", UserController.Update)
 
 
 export default router
+ 
