@@ -115,7 +115,7 @@ export const Update = async(req, res) =>{
         })
 
         res.json({
-            sucess: true
+            sucess: req.body
         })
     } catch (err) {
         console.log(err);
